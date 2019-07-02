@@ -6,9 +6,5 @@
 
     $calculadora = new CalculadoraDeImpostos();
 
-    echo $calculadora->calculaICMS($reforma);
-
-    echo "<br />";
-
-    echo $calculadora->calculaISS($reforma);
+    echo $calculadora->calculaICMS($reforma)
 ?>

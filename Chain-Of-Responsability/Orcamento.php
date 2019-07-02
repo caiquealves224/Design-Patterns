@@ -12,7 +12,7 @@ class Orcamento
 
     }
 
-    public function addItem(Item $novoItem) :void
+    public function addItem(Item $novoItem) : void
     {
         $this->itens[] = $novoItem;
     }
