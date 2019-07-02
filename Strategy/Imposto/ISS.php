@@ -1,6 +1,6 @@
 <?php
 
-class ISS
+class ISS implements Imposto
 {
     public function calcula(Orcamento $Orcamento)
     {

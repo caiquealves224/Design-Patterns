@@ -1,6 +1,6 @@
 <?php
 
-class ICMS
+class ICMS implements Imposto
 {
     public function calcula(Orcamento $Orcamento)
     {
