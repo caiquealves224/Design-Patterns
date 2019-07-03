@@ -4,7 +4,7 @@ class CalculadoraDeDescontos
 {
     public function desconto(Orcamento $Orcamento)
     {
-        if(count($Orcamento->getItens() >= 5)){
+        if(count($Orcamento->getLista() >= 5)){
 
             return $Orcamento->getValor() * 0.1;
 
