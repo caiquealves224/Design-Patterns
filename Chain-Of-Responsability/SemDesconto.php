@@ -1,13 +1,13 @@
 <?php
 
-class SemDesconto implements InterfaceDesconto
+class SemDesconto implements IDesconto
 {
     public function desconto(Orcamento $Orcamento)
     {
         return 0;
     }
 
-    public function setProximo(Desconto $desconto)
+    public function setProximo(IDesconto $desconto)
     {
         # code...
     }

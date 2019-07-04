@@ -1,6 +1,5 @@
 <?php
-
-class Desconto500Reais implements InterfaceDesconto
+class Desconto500Reais implements IDesconto
 {
     private $proximoDesconto;
 
@@ -13,7 +12,7 @@ class Desconto500Reais implements InterfaceDesconto
         return $this->proximoDesconto->desconto($Orcamento);
     }
 
-    public function setProximo(Desconto $proximo)
+    public function setProximo(IDesconto $proximo)
     {
         $this->proximoDesconto = $proximo;
     }

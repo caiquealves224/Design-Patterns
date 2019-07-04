@@ -15,6 +15,7 @@ class Orcamento
     public function addItem(Item $novoItem) : void
     {
         $this->itens[] = $novoItem;
+        $this->valor += $novoItem->getValor();
     }
 
     public function getLista() : array
