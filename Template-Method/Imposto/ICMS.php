@@ -2,11 +2,16 @@
 
 class ICMS extends TemplateDeImpostoCondicional
 {
-    public function calcula(Orcamento $Orcamento)
-    {
-        if($Orcamento->getValor() > 500 ) {
-            return $Orcamento->getValor() * 0.05;    
-        }
+
+    public function deveUsarOMaximo(Orcamento $Orcamento){
+        return $Orcamento->getValor() > 500;
+    }
+
+    public function taxacaoMinima(Orcamento $Orcamento){
         return $Orcamento->getValor() * 0.05;
+    }
+    
+    public function taxacaoMaxima(Orcamento $Orcamento){
+        return $Orcamento->getValor() * 0.15;
     }
 }
