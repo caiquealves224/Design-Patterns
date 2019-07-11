@@ -11,9 +11,9 @@ abstract class TemplateDeImpostoCondicional implements Imposto
         }
     }
 
-    public abstract function deveUsarOMaximo(Orcamento $Orcamento);
+    protected abstract function deveUsarOMaximo(Orcamento $Orcamento);
 
-    public abstract function taxacaoMinima(Orcamento $Orcamento);
+    protected abstract function taxacaoMinima(Orcamento $Orcamento);
     
-    public abstract function taxacaoMaxima(Orcamento $Orcamento);
+    protected abstract function taxacaoMaxima(Orcamento $Orcamento);
 }
