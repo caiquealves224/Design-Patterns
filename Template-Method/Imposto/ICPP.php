@@ -1,6 +1,6 @@
 <?php
 
-class IKCV extends TemplateDeImpostoCondicional
+class ICPP extends TemplateDeImpostoCondicional
 {
     public function deveUsarOMaximo(Orcamento $Orcamento){
         return $Orcamento->getValor() > 500;
