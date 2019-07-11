@@ -1,6 +1,6 @@
 <?php
 
-class ICMS implements Imposto
+class ICMS extends TemplateDeImpostoCondicional
 {
     public function calcula(Orcamento $Orcamento)
     {

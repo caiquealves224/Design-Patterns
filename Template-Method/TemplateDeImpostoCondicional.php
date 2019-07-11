@@ -1,6 +1,6 @@
 <?php
 
-class TemplateDeImpostoCondicional implements Imposto
+abstract class TemplateDeImpostoCondicional implements Imposto
 {
     public function calcula(Orcamento $Orcamento)
     {
