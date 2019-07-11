@@ -7,6 +7,7 @@
     require "Imposto/ISS.php";
     require "Imposto/KCV.php";
     require "Imposto/ICPP.php";
+    require "Imposto/IKCV.php";
 
     $reforma = new Orcamento(1000);
 
@@ -25,4 +26,8 @@
     echo "<br />";
 
     echo $calculadora->calcula($reforma, new ICPP());
+
+    echo "<br />";
+
+    echo $calculadora->calcula($reforma, new IKCV());
 ?>
