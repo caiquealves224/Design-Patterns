@@ -2,7 +2,7 @@
 
 abstract class TemplateDeImpostoCondicional implements Imposto
 {
-    public function calcula(Orcamento $Orcamento)
+    public final function calcula(Orcamento $Orcamento)
     {
         if($this->deveUsarOMaximo($Orcamento)){
             return $this->taxacaoMaxima($Orcamento);
