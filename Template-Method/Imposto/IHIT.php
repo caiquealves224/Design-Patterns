@@ -15,7 +15,7 @@ class IHIT extends TemplateDeImpostoCOndicional
     }
 
     protected function taxacaoMinima(Orcamento $Orcamento){
-        return count($Orcamento->getLista()) * 0.01;
+        return $Orcamento->getValor() * (count($Orcamento->getLista()) * 0.01);
     }
     
     protected function taxacaoMaxima(Orcamento $Orcamento){
