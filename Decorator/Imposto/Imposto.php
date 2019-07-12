@@ -5,7 +5,7 @@ abstract class Imposto
 
     protected $outroImposto;
 
-    function __construct($Imposto = null)
+    function __construct(Imposto $Imposto = null)
     {
         $this->outroImposto = $Imposto;
     }
