@@ -2,6 +2,12 @@
 
 class IKCV extends TemplateDeImpostoCondicional
 {
+
+    public function __construct(Imposto $outroImposto = null)
+    {
+        parent::__construct($outroImposto);
+    }
+
     protected function deveUsarOMaximo(Orcamento $Orcamento){
         return $Orcamento->getValor() > 500 && $this->temItemMaiorQue100ReaisNo($Orcamento);
     }

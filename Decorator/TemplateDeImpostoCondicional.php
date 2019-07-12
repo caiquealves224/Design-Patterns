@@ -2,6 +2,12 @@
 
 abstract class TemplateDeImpostoCondicional extends Imposto
 {
+
+    public function __construct(Imposto $outroImposto = null)
+    {
+        parent::__construct($outroImposto);
+    }
+    
     public final function calcula(Orcamento $Orcamento)
     {
         if($this->deveUsarOMaximo($Orcamento)){

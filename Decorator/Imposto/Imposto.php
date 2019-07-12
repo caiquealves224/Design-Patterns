@@ -7,7 +7,14 @@ abstract class Imposto
 
     function __construct($Imposto = null)
     {
-        $this->outroImposto = $imposto;
+        $this->outroImposto = $Imposto;
     }
+
+    protected function calculaOutroImposto(Orcamento $Orcamento)
+    {
+        if($this->outroImposto == null) return 0;
+        return $this->outroImposto->calcula($Orcamento);
+    }
+
     public abstract function calcula(Orcamento $Orcamento);
 }
