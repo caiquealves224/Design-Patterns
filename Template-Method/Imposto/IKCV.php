@@ -3,7 +3,7 @@
 class IKCV extends TemplateDeImpostoCondicional
 {
     protected function deveUsarOMaximo(Orcamento $Orcamento){
-        return $Orcamento->getValor() > 500 && temItemMaiorQue100ReaisNo($Orcamento);
+        return $Orcamento->getValor() > 500 && $this->temItemMaiorQue100ReaisNo($Orcamento);
     }
 
     protected function taxacaoMinima(Orcamento $Orcamento){
@@ -15,7 +15,7 @@ class IKCV extends TemplateDeImpostoCondicional
     }
 
     private function temItemMaiorQue100ReaisNo(Orcamento $orcamento) {
-        foreach ($orcamento->getItens() as $item) {
+        foreach ($orcamento->getLista() as $item) {
             if($item->getValor() > 100) return true;
         }
         return false;

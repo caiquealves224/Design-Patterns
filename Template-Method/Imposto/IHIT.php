@@ -1,6 +1,6 @@
 <?php
 
-class IHIT extends TemplateDeImpostoCOndicional
+class IHIT extends TemplateDeImpostoCondicional
 {
 
     protected function deveUsarOMaximo(Orcamento $Orcamento){
