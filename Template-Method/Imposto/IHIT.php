@@ -2,18 +2,24 @@
 
 class IHIT extends TemplateDeImpostoCOndicional
 {
+
     protected function deveUsarOMaximo(Orcamento $Orcamento){
-        if($Ocamento->getLista()){
-            
+        $noOrcamento = Array();
+
+        foreach($Orcamento->getLista() as $item ){
+            if(in_array($item->getNome(), $noOrcamento)) return true;
+            else $noOrcamento[] = $item->getNome();
         }
-        
+
+        return false;
     }
 
     protected function taxacaoMinima(Orcamento $Orcamento){
-
+        return count($Orcamento->getLista()) * 0.01;
     }
     
     protected function taxacaoMaxima(Orcamento $Orcamento){
-
+        return ($Orcamento->getValor() * 0.13) + 100;
     }
+
 }
