@@ -4,6 +4,7 @@ class Orcamento
 {
     private $valor;
     private $itens;
+    private $estado;
 
     function __construct($valor){
         $this->valor = $valor;
