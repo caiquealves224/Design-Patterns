@@ -15,16 +15,22 @@ class NotasFiscaisBuilder
         $this->valorBruto = 0;
         $this->valorImpostos = 0;
         $this->itens = array();
+
+        return $this;
     }
 
     public function comEmpresa($nomeEmpresa)
     {
         $this->empresa = $nomeEmpresa;
+
+        return $this;
     }
 
     public function comCNPJ($CNPJ)
     {
         $this->cnpj = $CNPJ;
+
+        return $this;
     }
 
     public function addItem(Item $novoItem)
@@ -32,11 +38,15 @@ class NotasFiscaisBuilder
         $this->itens[] = $novoItem;
         $this->valorBruto += $novoItem->getValor(); 
         $this->valorImpostos += $novoItem->getValor() * 0.2; 
+
+        return $this;
     }
 
     public function comObservacao($observacao)
     {
         $this->observacoes = $observacao;
+
+        return $this;
     }
 
     public function naData($data = null )
@@ -46,6 +56,8 @@ class NotasFiscaisBuilder
         }
 
         $this->dataEmissao = $data;
+
+        return $this;
     }
 
     public function build()

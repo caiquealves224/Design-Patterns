@@ -17,12 +17,12 @@ $notaFiscal = new NotaFiscal("ALura", "1234", $itens, 500, $imposto, "Tijolos am
 
 $geradorDeNota = new NotasFiscaisBuilder();
 
-$geradorDeNota->comEmpresa("Alura");
-$geradorDeNota->comCNPJ("1234");
-$geradorDeNota->addItem(new Item("Tijolo", 250));
-$geradorDeNota->addItem(new Item("Cimento 1kg", 250));
-$geradorDeNota->comObservacao("Tijolos Amarelos");
-$geradorDeNota->naData();
+$geradorDeNota->comEmpresa("EMpresa xpto")
+    ->comCNPJ("1234")
+    ->addItem(new Item("Tijolo", 250))
+    ->addItem(new Item("Cimento 1kg", 250))
+    ->comObservacao("Tijolos Amarelos")
+    ->naData();
 
 $notaFiscal2 = $geradorDeNota->build();
 
