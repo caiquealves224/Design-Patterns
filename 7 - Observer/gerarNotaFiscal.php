@@ -2,14 +2,11 @@
 
 date_default_timezone_set("Brazil/East");
 
-require "IAcoesAoGerarNota.php";
+function carregaClasse($nomeClasse){
+    require "$nomeClasse.php";
+}
 
-require "NotaFiscalDao.php";
-require "NotaFiscal.php";
-require "Item.php";
-require "Impressora.php";
-require "ItemBuilder.php";
-require "NotasFiscaisBuilder.php";
+spl_autoload_register("carregaClasse");
 
 $itens = array();
 $itens[] = new Item("Tijolo", 250);
@@ -31,6 +28,7 @@ $geradorDeNota->comEmpresa("EMpresa xpto")
 
 $geradorDeNota->addAcao(new Impressora());
 $geradorDeNota->addAcao(new NotaFiscalDao());
+$geradorDeNota->addAcao(new EnviarSMS());
 
 $notaFiscal2 = $geradorDeNota->build();
 

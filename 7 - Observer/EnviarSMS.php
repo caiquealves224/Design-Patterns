@@ -2,8 +2,8 @@
 
 class EnviarSMS implements IAcoesAoGerarNota
 {
-    public function executa()
+    public function executa(NotaFiscal $nf)
     {
-        echo "Enviando SMS";
+        echo "Enviando SMS \n";
     }
 }
