@@ -1,3 +1,3 @@
 Arquivos desenvoldidos na sequência:
 
-    Strategy -> Chain of renponsabily -> Template method -> Decorator -> State -> Builder
+    Strategy -> Chain of renponsabily -> Template method -> Decorator -> State -> Builder -> Observer
