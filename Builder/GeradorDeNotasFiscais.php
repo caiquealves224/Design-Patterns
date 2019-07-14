@@ -34,9 +34,9 @@ class GeradorDeNotasFiscais
         $this->valorImpostos += $novoItem->getValor() * 0.2; 
     }
 
-    public function comObservacao($obsrvacao)
+    public function comObservacao($observacao)
     {
-        $this->observacoes = $obsrvacao;
+        $this->observacoes = $observacao;
     }
 
     public function naData($data = null )
@@ -55,9 +55,9 @@ class GeradorDeNotasFiscais
             $this->cnpj,
             $this->itens,
             $this->valorBruto,
-            $this->$valorImpostos,
-            $this->$observacoes,
-            $this->$dataEmissao
+            $this->valorImpostos,
+            $this->observacoes,
+            $this->dataEmissao
         );
 
         return $nf;
