@@ -9,7 +9,7 @@ class Orcamento
     function __construct($valor){
         $this->valor = $valor;
         $this->itens = array();
-
+        $this->estado = new EmAprovacao;
 
     }
 
@@ -30,5 +30,15 @@ class Orcamento
 
     public function setValor($valor){
         $this->valor = $valor;
+    }
+
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
     }
 }
