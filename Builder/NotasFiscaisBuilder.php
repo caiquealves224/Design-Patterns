@@ -48,7 +48,7 @@ class NotasFiscaisBuilder
         $this->dataEmissao = $data;
     }
 
-    public function gerar()
+    public function build()
     {
         $nf = new NotaFiscal(
             $this->empresa,

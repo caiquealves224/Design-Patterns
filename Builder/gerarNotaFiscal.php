@@ -24,6 +24,6 @@ $geradorDeNota->addItem(new Item("Cimento 1kg", 250));
 $geradorDeNota->comObservacao("Tijolos Amarelos");
 $geradorDeNota->naData();
 
-$notaFiscal2 = $geradorDeNota->gerar();
+$notaFiscal2 = $geradorDeNota->build();
 
 var_dump($notaFiscal2);
