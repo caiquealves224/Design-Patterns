@@ -1,9 +1,9 @@
 <?php
 
-class Aprovado 
+class Reprovado 
 {
     public function aplicaDesconto(Orcamento $Orcamento)
     {
-        return $Orcamento->setValor($Orcamento->getValor() - 0.05);
+        throw new Exception("Orçamento Reprovado não pode receber descontos", 1);
     }
 }
