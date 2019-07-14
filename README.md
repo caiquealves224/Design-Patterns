@@ -1,2 +1,3 @@
-Arquivos desenvoldidos em sequencia;
-    Strategy -> Chain of renponsabily -> Template method -> Decorator -> State
+Arquivos desenvoldidos na sequência:
+
+    Strategy -> Chain of renponsabily -> Template method -> Decorator -> State -> Builder
