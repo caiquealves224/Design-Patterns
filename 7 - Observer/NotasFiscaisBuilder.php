@@ -10,11 +10,21 @@ class NotasFiscaisBuilder
     private $observacoes;
     private $dataEmissao;
 
+    private $acoesAoGerar;
+
     function __construct()
     {
         $this->valorBruto = 0;
         $this->valorImpostos = 0;
         $this->itens = array();
+        $this->acoesAoGerar = array();
+
+        return $this;
+    }
+
+    public function addAcao(IAcoesAoGerarNota $acao)
+    {
+        $this->acoesAoGerar[] = $acao;
 
         return $this;
     }
@@ -71,6 +81,10 @@ class NotasFiscaisBuilder
             $this->observacoes,
             $this->dataEmissao
         );
+
+        foreach($this->acoesAoGerar as $acao){
+            $acao->executa($nf);
+        }
 
         return $nf;
     }

@@ -2,8 +2,12 @@
 
 date_default_timezone_set("Brazil/East");
 
+require "IAcoesAoGerarNota.php";
+
+require "NotaFiscalDao.php";
 require "NotaFiscal.php";
 require "Item.php";
+require "Impressora.php";
 require "ItemBuilder.php";
 require "NotasFiscaisBuilder.php";
 
@@ -24,6 +28,9 @@ $geradorDeNota->comEmpresa("EMpresa xpto")
     ->addItem(new Item("Cimento 1kg", 250))
     ->comObservacao("Tijolos Amarelos")
     ->naData();
+
+$geradorDeNota->addAcao(new Impressora());
+$geradorDeNota->addAcao(new NotaFiscalDao());
 
 $notaFiscal2 = $geradorDeNota->build();
 
