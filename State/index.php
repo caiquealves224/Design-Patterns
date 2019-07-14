@@ -9,14 +9,15 @@
     require "Imposto/ICPP.php";
     require "Imposto/IKCV.php";
     require "Imposto/ImpostoMuitoCaro.php";
+    require "Estado/IEstado.php";
     require "Estado/Aprovado.php";
+    require "Estado/EmAprovacao.php";
+    require "Estado/Reprovado.php";
+    require "Estado/Finalizado.php";
 
-    $reforma = new Orcamento(500);
+    $reforma = new Orcamento(490);
 
-
-    $estado = new Aprovado();
-
-    $estado->aplicaDesconto($reforma);
+    $reforma->aplicaDesconto();
 
     echo $reforma->getValor();
 ?>

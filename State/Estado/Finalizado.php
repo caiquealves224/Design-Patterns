@@ -1,6 +1,6 @@
 <?php
 
-class Finalizado 
+class Finalizado implements IEstado
 {
     public function aplicaDesconto(Orcamento $Orcamento)
     {

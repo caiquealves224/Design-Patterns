@@ -1,6 +1,6 @@
 <?php
 
-class Reprovado 
+class Reprovado implements IEstado
 {
     public function aplicaDesconto(Orcamento $Orcamento)
     {

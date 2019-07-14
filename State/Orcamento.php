@@ -41,4 +41,9 @@ class Orcamento
     {
         $this->estado = $estado;
     }
+
+    public function aplicaDesconto()
+    {
+        $this->estado->aplicaDesconto($this);
+    }
 }
