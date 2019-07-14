@@ -16,6 +16,6 @@ class EmAprovacao implements IEstado
     }
 
     public function Finaliza(Orcamento $Orcamento){
-        throw new Exception("Não pode finalizar um orcamento sem reprovalo", 1);
+        throw new Exception("Apenas orçamentos aprovados podem ser finalizados", 1);
     }
 }
