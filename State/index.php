@@ -19,5 +19,9 @@
 
     $reforma->aplicaDesconto();
 
+    echo $reforma->getValor() . "\n";
+
+    $reforma->aprova();
+    $reforma->aplicaDesconto();
     echo $reforma->getValor();
 ?>
