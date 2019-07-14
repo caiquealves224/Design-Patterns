@@ -4,7 +4,7 @@ date_default_timezone_set("Brazil/East");
 
 require "NotaFiscal.php";
 require "Item.php";
-require "GeradorNotasFiscais.php";
+require "GeradorDeNotasFiscais.php";
 
 $itens = array();
 $itens[] = new Item("Tijolo", 250);
@@ -15,7 +15,7 @@ $notaFiscal = new NotaFiscal("ALura", "1234", $itens, 500, $imposto, "Tijolos am
 
 // var_dump($notaFiscal);
 
-$geradorDeNota = new GeradorNotasFiscais();
+$geradorDeNota = new GeradorDeNotasFiscais();
 
 $geradorDeNota->comEmpresa("Alura");
 $geradorDeNota->comCNPJ("1234");
