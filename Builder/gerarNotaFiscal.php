@@ -4,6 +4,7 @@ date_default_timezone_set("Brazil/East");
 
 require "NotaFiscal.php";
 require "Item.php";
+require "ItemBuilder.php";
 require "NotasFiscaisBuilder.php";
 
 $itens = array();
@@ -19,7 +20,7 @@ $geradorDeNota = new NotasFiscaisBuilder();
 
 $geradorDeNota->comEmpresa("EMpresa xpto")
     ->comCNPJ("1234")
-    ->addItem(new Item("Tijolo", 250))
+    ->addItem((new ItemBuilder())->comNome("teste de produto builder")->comValor(23)->build())
     ->addItem(new Item("Cimento 1kg", 250))
     ->comObservacao("Tijolos Amarelos")
     ->naData();
