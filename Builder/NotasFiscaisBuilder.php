@@ -1,6 +1,6 @@
 <?php
 
-class GeradorDeNotasFiscais
+class NotasFiscaisBuilder
 {
     private $empresa;
     private $cnpj;
