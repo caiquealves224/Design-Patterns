@@ -4,7 +4,7 @@ class Aprovado implements IEstado
 {
     public function aplicaDesconto(Orcamento $Orcamento)
     {
-        return $Orcamento->setValor($Orcamento->getValor() - $Orcamento->getValor() * 0.02);
+        return $Orcamento->setValor($Orcamento->getValor() - $Orcamento->getValor() * 0.05);
     }
 
     public function Aprova(Orcamento $Orcamento){

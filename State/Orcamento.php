@@ -37,7 +37,7 @@ class Orcamento
         return $this->estado;
     }
 
-    public function setEstado($estado)
+    public function setEstado(IEstado $estado)
     {
         $this->estado = $estado;
     }

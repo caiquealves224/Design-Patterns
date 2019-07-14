@@ -23,5 +23,14 @@
 
     $reforma->aprova();
     $reforma->aplicaDesconto();
+
+    echo $reforma->getValor() . "\n";
+
+    // $reforma->finaliza(); tem que lançar uma exceção
+    // $reforma->reprova(); tem que lançar uma exceção
+
+
+    $reforma->aplicaDesconto();
+
     echo $reforma->getValor();
 ?>
