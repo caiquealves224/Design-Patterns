@@ -47,4 +47,19 @@ class GeradorDeNotasFiscais
 
         $this->dataEmissao = $data;
     }
+
+    public function gerar()
+    {
+        $nf = new NotaFiscal(
+            $this->empresa,
+            $this->cnpj,
+            $this->itens,
+            $this->valorBruto,
+            $this->$valorImpostos,
+            $this->$observacoes,
+            $this->$dataEmissao
+        );
+
+        return $nf;
+    }
 }

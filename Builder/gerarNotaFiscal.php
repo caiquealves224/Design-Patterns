@@ -19,7 +19,11 @@ $geradorDeNota = new GeradorNotasFiscais();
 
 $geradorDeNota->comEmpresa("Alura");
 $geradorDeNota->comCNPJ("1234");
-$geradorDeNota->addItem("");
-$geradorDeNota->addItem("");
+$geradorDeNota->addItem(new Item("Tijolo", 250));
+$geradorDeNota->addItem(new Item("Cimento 1kg", 250));
 $geradorDeNota->comObservacao("Tijolos Amarelos");
 $geradorDeNota->naData();
+
+$notaFiscal2 = $geradorDeNota->gerar();
+
+var_dump($notaFiscal2);
