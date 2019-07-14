@@ -46,4 +46,19 @@ class Orcamento
     {
         $this->estado->aplicaDesconto($this);
     }
+
+    public function aprova()
+    {
+        $this->estado->aprova($this);
+    }
+
+    public function Reprova()
+    {
+        $this->estado->reprova($this);
+    }
+
+    public function finaliza()
+    {
+        $this->estado->finaliza($this);
+    }
 }
