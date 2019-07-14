@@ -39,11 +39,12 @@ class GeradorDeNotasFiscais
         $this->observacoes = $obsrvacao;
     }
 
-    public function data($data = null )
+    public function naData($data = null )
     {
         if(is_null($data)){
             $data =  date("Y-m-d h:i:s");
         }
+
         $this->dataEmissao = $data;
     }
 }
