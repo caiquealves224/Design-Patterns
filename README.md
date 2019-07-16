@@ -4,3 +4,6 @@
 Arquivos desenvoldidos na sequência:
 
     Strategy -> Chain of renponsability -> Template method -> Decorator -> State -> Builder -> Observer
+    
+    Certificado: https://github.com/caiquealves224/Design-Patterns/blob/master/Caique%20Santos%20-%20Cursos%20-%20Alura.pdf
+    Certificado Formal : https://github.com/caiquealves224/Design-Patterns/blob/master/Cerificado%20Alura%20Design%20Patterns.pdf
